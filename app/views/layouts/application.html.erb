@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyRecipies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <%= link_to "MyRecipies", "", class:"btn btn-large btn-success",id: "logo" %>
+    <div class="nav_item">
+      <%= link_to "Link 1", "", class:"btn btn-large btn-warning",id: "link1" %>
+    </div>
+    <div class="nav_item">
+      <%= link_to "Link 2", "", class:"btn btn-large btn-warning",id: "link2" %>
+    </div>
+    <div class="nav_item">
+      <%= link_to "Link 3", "", class:"btn btn-large btn-warning",id: "link3" %>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <%= yield %>
+  <div class="footer">
+    <p>&copy;MyRecipies 2015</p>
+  </div>
+</div>
+</body>
+</html>
