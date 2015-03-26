@@ -28,11 +28,11 @@ gem 'spring',        group: :development
 
 group :development, :test do
  gem 'sqlite3'
- gem 'pry'
+ gem 'pry' #coderay
 end
 
 group :production do
- gem 'P9'
+ gem 'pg' #postgress
  gem 'rails_12factor'
 end
 
