@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.4'
@@ -28,7 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :development, :test do
- gem 'sqlite3'
+ # Use sqlite3 as the database for Active Record
+gem 'sqlite3'
  gem 'pry' #coderay
 end
 
