@@ -1,7 +1,8 @@
 class RecipesController < ApplicationController
   
   def index
-    @recipes = Recipe.all
+    # @recipes = Recipe.all.sort_by{|likes| likes.thumbs_up_total}.reverse
+    @recipes = Recipe.paginate(page: params[:page], per_page: 4)
   end
   
   def show
@@ -40,8 +41,18 @@ class RecipesController < ApplicationController
   
   def like
     @recipe = Recipe.find(params[:id])
-    Like.create(like: params[:like],chef: Chef.first, recipe: @recipe)
-    flash[:success] = "Cool!"
+    like = params[:like]
+    like_process = Like.create(like: like,chef: Chef.first, recipe: @recipe)
+    
+    if like_process.valid?
+      if like == "true"
+        flash[:success] = "Cool!"
+      else
+        flash[:warning] = "What a pity!"
+      end
+    else
+       flash[:danger] = "Only one vote!"
+    end
     redirect_to :back
   end
   
