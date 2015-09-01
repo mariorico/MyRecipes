@@ -6,6 +6,7 @@ class Chef < ActiveRecord::Base
   
   # Associations 
   has_many :recipes
+  has_many :likes
   
   # Callbacks
   before_save{
