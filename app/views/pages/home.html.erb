@@ -3,8 +3,8 @@
   
   <h2>This is my first web built with Ruby on Rails</h2>
   
-  <%= link_to "Sing up now!","",class:"btn btn-large btn-success" %>
-  <%= link_to "Sing in","",class:"btn btn-large btn-info" %>
+  <%= link_to "Sing up now!", register_path ,class:"btn btn-large btn-success" %>
+  <%= link_to "Sing in", login_path,class:"btn btn-large btn-info" %>
 </div>
 
 
@@ -18,10 +18,10 @@
   </div>
   <div class="col-lg-4">
     <h3 class="myRow">
-      View recipes as Guest User
+      Log in!!!!
     </h3>
-    <h2 class="left">Browse recipes as a guest and sign up later</h2>
-    <p><%= link_to "Browse recipe listing","",class:"btn btn-small btn-warning" %></p>
+    <h2 class="left">Add, edit and much more!</h2>
+    <p><%= link_to "Log in", login_path, class:"btn btn-small btn-warning" %></p>
   </div>
   <div class="col-lg-4">
     <h3 class="myRow">

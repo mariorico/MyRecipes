@@ -1,0 +1,31 @@
+<%= render 'shared/page_title', title: 'Chef: ' + @chef.name %>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 center">
+    <%= gravatar_for @chef, size: 200 %>
+  </div>
+</div>
+
+<br/>
+  
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 center">
+    <he><em>Recipes:</em></he>
+    <%= will_paginate @recipes %>
+  </div>
+</div>
+
+<% @recipes.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+        <p><%= recipe.summary %></p>
+        <%= render 'recipes/thumbs', recipe: recipe %>
+        <p>
+          Created: <span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %> ago</small></span>,&nbsp
+          Updated: <span class="quiet"><small><%= time_ago_in_words(recipe.updated_at) %> ago</small></span>
+        </p>
+      </div>
+  </div>
+<% end %>
+  

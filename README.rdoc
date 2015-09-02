@@ -43,6 +43,21 @@ Things you may want to cover:
     - email must be valid email
     - email unique
     
+    we have already:
+      - Chef model and validations
+      - Chef table with chefname and email
+    
+    Todo:
+      - Add passwords to chefs table
+      - use email as credential
+      - Sign up
+      - Chef profile
+      - list of chefs
+      - Login/Logout
+      - Restricting Creating recipes, edit and like to chefs
+      - Restrict edit recipes to created by chefs
+      
+    
 
 
 Please feel free to use a different markup language if you do not plan to run
