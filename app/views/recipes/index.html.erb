@@ -1,5 +1,7 @@
 <%= render 'shared/page_title', title: 'All recipes' %>
 
+<%= render 'shared/tabs' %>
+
 <%= will_paginate %>
 
 <% @recipes.each do |recipe| %>

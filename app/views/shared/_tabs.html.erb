@@ -1,0 +1,9 @@
+<% tab = params[:controller] %>
+<ul class="nav nav-tabs">
+  <li class="<%= 'active' if tab == 'recipes' %>">
+    <%= link_to "Recipes", recipes_path %>
+  </li>  
+  <li class="<%= 'active' if tab == 'chefs' %>">
+    <%= link_to "Chefs", chefs_path %>
+  </li>
+</ul>
